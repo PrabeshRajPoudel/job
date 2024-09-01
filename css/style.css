@@ -1,0 +1,1403 @@
+/* Root color variables */
+:root {
+  --primary-color: #ff4848; /* Root color */
+  --secondary-color: #6c757d; /* Secondary color */
+  --tertiary-color: white;
+}
+
+/* General body styles */
+body {
+  background-color: rgba(248, 249, 250, 0.9)!important;
+; /* Set to white or another solid color */
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.navbar {
+  position: relative; /* Position the navbar on top of the carousel */
+  top: -51rem; /* Align to the top of the carousel */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 10; /* Ensure it's above the carousel */
+}
+.navbar img{
+    height: 80px;
+}
+/* Space between navbar links */
+.navbar-nav .nav-link {
+  margin-left: 1rem; /* Space between links */
+  margin-right: 1rem; /* Space between links */
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+div#simpleCarousel{
+    background-color: rgba(248, 249, 250, 0.9); /* Slightly transparent background */
+
+}
+
+/* Carousel Section */
+.carousel-inner {
+height: 90vh
+}
+
+.carousel-image-wrapper {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Ensure the overlay is on top of the image */
+
+}
+
+.carousel-item {
+  height: 100%; /* Ensure the carousel item fills the height */
+}
+
+/**********************************************************************************************/
+
+/* Home Job section */
+.home-job {
+  position: relative; /* Allows z-index to work */
+  z-index: 2; /* Above the background */
+  background-color: rgba(248, 249, 250, 0.9); /* Slightly transparent background */
+}
+
+/* Title styling */
+.home-job h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h4.card-title{
+    font-size: 18px;
+}
+/* Cards container */
+.home-job .row {
+  display: flex; /* Use flexbox for equal card sizes */
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+/* Individual card styling */
+.home-job .card {
+  flex: 1 1 30%; /* Flexbox to ensure cards take up equal space */
+  margin: 10px; /* Margin between cards */
+  display: flex;
+  flex-direction: column; /* Stack card contents vertically */
+  height: 100%; /* Full height within its container */
+  max-width: 100%; /* Ensure it doesn’t overflow */
+}
+
+/* Ensure card content fills the space */
+.home-job .card-body {
+  flex: 1; /* Allows card body to expand */
+}
+
+/* Button styling */
+a.btn.view-more-btn {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 20px; /* Adjust as needed */
+  border-radius: 5px; /* Rounded corners for button */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline-block for padding to work */
+  margin-top: auto; /* Push button to the bottom of the card */
+}
+
+a.btn.view-more-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/**********************************************************************************************/
+
+/* Hero section styles */
+.hero-section {
+  background-image: url('../images/3.jpg'); /* Update this path to your image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  padding: 60px 0;
+  color: var(--tertiary-color);
+  text-align: left;
+  position: relative; /* Position relative for absolute positioning of child elements */
+  z-index: 1; /* Ensure hero section is above the background image */
+  background-attachment: fixed; /* Keep background image fixed when scrolling */
+}
+
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.btn-group .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.btn.apply-btn {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--tertiary-color);
+}
+
+a.btn.btn-secondary {
+  border: 1px solid white;
+  background: none;
+}
+
+a.btn.apply-btn:hover {
+  background-color: #e03b3a; /* Slightly darker shade for hover effect */
+  transform: scale(1.05);
+}
+
+a.btn.btn-secondary:hover {
+  background-color: #d1d1d1; /* Slightly darker shade for hover effect */
+  transform: scale(1.05);
+  color: black;
+}
+
+/**********************************************************************************************/
+
+/* Home Job Listing section */
+.home_job_listing {
+  position: relative; /* Allows z-index to work */
+  z-index: 2; /* Above the background */
+  background-color: rgba(248, 249, 250, 0.9); /* Slightly transparent background */
+}
+
+.home_job_listing h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+
+
+/* Base styles for the job card */
+.job-card {
+  position: relative; /* Make the card a positioning context */
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Hide overflow for the pseudo-elements */
+}
+
+/* Hover effect for the job card */
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Pseudo-elements for triangles */
+.job-card::before,
+.job-card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: transform 0.3s ease;
+}
+
+/* Top right triangle */
+.job-card::before {
+  border-width: 0 80px 80px 0; /* Triangle pointing to the top-right */
+  border-color: transparent #e03b3a transparent transparent; /* Triangle color */
+  top: 0;
+  right: 0;
+  transform: translate(100%, -100%); /* Initially hidden */
+}
+
+/* Bottom left triangle */
+.job-card::after {
+  border-width: 80px 0 0 80px; /* Triangle pointing to the bottom-left */
+  border-color: transparent transparent transparent #e03b3a; /* Triangle color */
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%, 100%); /* Initially hidden */
+}
+
+/* Show triangles on hover */
+.job-card:hover::before {
+  transform: translate(0, 0); /* Show top-right triangle */
+}
+
+.job-card:hover::after {
+  transform: translate(0, 0); /* Show bottom-left triangle */
+}
+
+
+.job-card-header {
+  background-color: #e03b3a; /* Red background */
+  color: #fff; /* White text color */
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+}
+
+.job-card-body {
+  display: flex;
+  padding: 15px;
+  align-items: center; /* Center-align items vertically */
+}
+
+.job-card-col {
+  flex: 1;
+  text-align: center;
+}
+
+.job-card-left {
+  text-align: left;
+}
+
+.job-card-right {
+  text-align: right;
+}
+
+a.btn.btn-apply {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: 2px solid red;
+    color: red;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+
+a.btn.btn-apply:hover {
+  background-color: black; /* Darker red on hover */
+  color: white;
+  border: 2px solid black;
+}
+
+.card-column {
+  padding: 20px;
+}
+
+/* New spacing classes for consistent top spacing */
+.spacing-top {
+  padding-top: 20px; /* Adjust this value for desired spacing */
+}
+
+
+h5.spacing-top{
+  margin-top: 10px;
+}
+ /* Hide extra job cards by default */
+    .job-card.recent:nth-child(n+6) {
+      display: none;
+    }
+    .job-card.updated:nth-child(n+6) {
+      display: none;
+
+    }/* Button default styles */
+button#showRecent, button#showUpdated {
+  background-color: var(--tertiary-color);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    height: 60px;
+}
+/* Active button styles */
+button#showRecent.active {
+    background-color: black;
+    color: var(--tertiary-color);
+}
+
+button#showUpdated.active{ 
+    background-color: black;
+    color: var(--tertiary-color);
+}
+
+
+
+
+
+
+/**********************************************************************************************/
+/* Page Heading */
+.page-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Page Paragraph */
+.page-paragraph {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Apply Button */
+a.btn.about-apply-btn{
+background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    position: absolute; /* Fixes the button within the container */
+    bottom: 20px; /* Adjust this value as needed */
+    left: 12%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+.btn-apply:hover {
+    background-color: darken(var(--primary-color), 10%);
+    color: var(--secondary-color);
+}
+
+/* Responsive Image */
+.img-fluid {
+    max-width: 100%;
+    height: 60px; /* Set the same height as the button */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+/**********************************************************************************************/
+
+/* Home Service Section */
+.home-service {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 2rem 0;
+}
+
+.home-service h2 {
+    color: black;
+    font-size: 2.5rem; /* Title size */
+    font-weight: 600; /* Semi-bold */
+    text-align: center; /* Center the heading */
+}
+
+.home-service .text-center {
+    margin-bottom: 2rem;
+}
+
+.home-service .card {
+    border: none; /* Remove default card border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure no overflow for rounded corners */
+}
+
+.home-service .card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure image covers the card area */
+}
+
+.home-service .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to the bottom */
+    padding: 1.25rem; /* Default Bootstrap padding */
+}
+
+.home-service .card-title {
+    font-size: 1.25rem; /* Title size */
+    font-weight: 600; /* Semi-bold title */
+    color: black;
+}
+
+.home-service .card-text {
+    font-size: 0.875rem; /* Smaller font size for text */
+    color: #6c757d; /* Gray color for text */
+}
+.home-service .custom-btn {
+    background-color: var(--primary-color); /* Primary color for buttons */
+    color: white !important; /* Text color for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    font-size: 0.875rem; /* Button font size */
+    font-weight: bold; /* Semi-bold text */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    margin-top: auto; /* Push button to the bottom of the card body */
+    display: flex; /* Enable flexbox for button */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    text-align: center; /* Ensure text is centered */
+    height: 50px; /* Fixed height for buttons */
+}
+
+/**********************************************************************************************/
+
+/* Footer Section */
+.w3l-footer-17 {
+    background-color: #343a40; /* Dark background color for footer */
+    color: #ffffff; /* White text color */
+    padding: 2rem 2rem 0rem 2rem ; /* Padding for top and bottom */
+}
+
+.footer17_sur {
+    background-color: #212529; /* Slightly darker background for contrast */
+}
+
+
+.footer17-top {
+      max-width: 1625px;
+margin: 0 auto;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer17-top > div {
+    flex: 1;
+    min-width: 220px;
+    margin-right: 20px;
+}
+
+.footer17-top h6 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer17-top p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #b0b0b0; /* Light gray color for paragraph text */
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ced4da; /* Light border for the input field */
+    outline: none;
+}
+
+.subscribe button {
+    background-color: #009688; /* Button color */
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #ffffff; /* Text color */
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.subscribe button:hover {
+    background-color: #00796b; /* Darker color on hover */
+}
+
+.footer17-top ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer17-top ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer17-top ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer17-top ul li a:hover {
+    color: #00bcd4; /* Light cyan color for links on hover */
+}
+
+.footer17-top-left5_sur img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px; /* Space between app store images */
+}
+
+.footer-left {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #343a40; /* Matching background color for the bottom section */
+}
+
+.footer-left p {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.footer-left a {
+    color: #00bcd4; /* Bright cyan color for the link */
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/**********************************************************************************************/
+
+
+/*About Page*/
+
+/* About Section */
+
+
+.about-section h1 {
+    color: black;
+  font-size: 2.5rem;
+  font-size: 600;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.about-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.about-section ul {
+    padding-left: 20px;
+    margin-top: 1rem;
+}
+
+.about-section ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Flexbox for Equal Height Columns */
+.about-section .row {
+    display: flex;
+    align-items: stretch; /* Ensures all children have equal height */
+}
+
+.about-section .col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+}
+
+.about-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+}
+/**********************************************************************************************/
+/* Filters Column */
+.filter-box {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-box h4 {
+  margin-bottom: 20px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.hidden-job-card {
+  display: none;
+}
+/**********************************************************************************************/
+
+
+
+/* Contact Section */
+.contact-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  padding-bottom: 3rem;
+}
+
+.contact-title {
+  color: var(--primary-color); /* Primary color */
+}
+
+.contact-info {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group label {
+  font-weight: bold;
+  color: var(--primary-color); /* Primary color */
+}
+
+.contact-form .form-control {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  padding: 0.75rem 1.25rem;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary-color); /* Primary color */
+  box-shadow: 0 0 0 0.2rem rgba(158, 28, 31, 0.25);
+}
+
+.contact-btn {
+  background-color: var(--primary-color); /* Primary color */
+  border-color: var(--primary-color); /* Primary color */
+  color: #fff;
+}
+
+.contact-btn:hover {
+  background-color: #7a1416; /* Darker shade for hover */
+  border-color: #7a1416; /* Darker shade for hover */
+}
+
+/**********************************************************************************************/
+
+
+
+/* Login Card */
+.login-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  color: var(--primary-color); /* Primary color */
+  margin-bottom: 0;
+}
+
+.login-form {
+  padding: 1.5rem;
+}
+
+.login-input {
+  border-radius: 0.25rem;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  padding: 0.75rem 1.25rem;
+}
+
+.login-input:focus {
+  border-color: var(--primary-color); /* Primary color */
+  box-shadow: 0 0 0 0.2rem rgba(158, 28, 31, 0.25);
+}
+
+.login-btn {
+  background-color: var(--primary-color); /* Primary color */
+  border-color: var(--primary-color); /* Primary color */
+  color: #fff;
+}
+
+.login-btn:hover {
+  background-color: #7a1416; /* Darker shade for hover */
+  border-color: #7a1416; /* Darker shade for hover */
+}
+.login-link {
+  color: var(--primary-color); /* Primary color */
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+
+/**********************************************************************************************/
+
+
+.register-link {
+  color: var(--primary-color); /* Primary color */
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+
+/**********************************************************************************************/
+
+/* Register Card */
+.register-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+  color: var(--primary-color); /* Primary color */
+  margin-bottom: 0;
+}
+
+.register-form {
+  padding: 1.5rem;
+}
+
+.register-input {
+  border-radius: 0.25rem;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  padding: 0.75rem 1.25rem;
+}
+
+.register-input:focus {
+  border-color: var(--primary-color); /* Primary color */
+  box-shadow: 0 0 0 0.2rem rgba(158, 28, 31, 0.25);
+}
+
+.register-btn {
+  background-color: var(--primary-color); /* Primary color */
+  border-color: var(--primary-color); /* Primary color */
+  color: #fff;
+}
+
+.register-btn:hover {
+  background-color: #7a1416; /* Darker shade for hover */
+  border-color: #7a1416; /* Darker shade for hover */
+}
+/**********************************************************************************************/
+
+
+
+
+
+
+
+
+/* Form Wrapper */
+.form-wrapper {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Form Title */
+.form-title {
+  color: var(--primary-color); /* Primary color */
+  margin-bottom: 1rem;
+}
+
+/* Form Labels */
+.form-label {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Form Inputs */
+.form-input {
+  border-radius: 0.25rem;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  padding: 0.75rem 1.25rem;
+}
+
+/* Form Inputs on Focus */
+.form-input:focus {
+  border-color: var(--primary-color); /* Primary color */
+  box-shadow: 0 0 0 0.2rem rgba(158, 28, 31, 0.25);
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--primary-color); /* Primary color */
+  border-color: var(--primary-color); /* Primary color */
+  color: #fff;
+}
+
+
+
+/* Footer */
+.form-footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Custom Background Color */
+.custom-bg-color {
+  background-color: #f1f1f1; /* Light gray background */
+}
+button.btn.submit-btn{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+
+}
+
+/**********************************************************************************************/
+
+
+
+
+
+
+.profile-title {
+    color: var(--primary-color); /* Assuming primary color is defined in your CSS variables */
+    text-align: center;
+    font-weight: 700;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    border: 1px solid var(--secondary-color); /* Assuming secondary color is defined */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card-header {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+.profile-card-body {
+    font-size: 1.15rem;
+    padding: 20px;
+    background-color: white;
+}
+
+.profile-table th {
+    width: 25%;
+    font-weight: bold;
+}
+
+.profile-table td {
+    width: 75%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+/**********************************************************************************************/
+
+.sidebar {
+    background-color: #343a40;
+    color: #ffffff;
+    height: 100vh;
+    position: fixed;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h4 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.card-body {
+    font-size: 1.125rem;
+}
+
+.card-body a {
+    text-decoration: none; /* Ensure no underline */
+    color: inherit; /* Inherit color from parent */
+}
+.card-body a:hover {
+    text-decoration: none; /* Ensure no underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+.chart-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: white;
+}
+
+
+/**********************************************************************************************/
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dashboard-container {
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin: auto;
+    width: 99rem;
+    height: 50rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.custom-btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.custom-btn-active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.custom-btn-inactive {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+}
+
+.form-control {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    height: 50px;
+}
+
+.table-container {
+    flex: 1; /* Allows the table container to grow and fill available space */
+    overflow-y: auto; /* Adds scroll if content overflows */
+}
+
+.table {
+    margin-top: 20px;
+    border-collapse: collapse; /* Use collapse for consistent borders and spacing */
+    width: 100%;
+    height: 100%; /* Fill the height of the container */
+    table-layout: fixed; /* Fix column width issues */
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    text-align: center;
+    top: 0;
+    z-index: 1; /* Ensure header is above the body when scrolling */
+}
+
+.table tbody {
+    display: block;
+    height: calc(100% - 60px); /* Adjust based on header height and any other paddings/margins */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table tbody tr 
+{    
+    min-height: 100px; /* Adjusted minimum height for each row */
+    height: 100px;     /* Adjusted fixed height for each row */
+}
+
+.table tbody td {
+    text-align: center;
+    vertical-align: middle; /* Center content vertically within each cell */
+    padding: 15px; /* Add padding for better spacing */
+}
+
+.table thead, .table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    padding: 15px; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.table td {
+    font-weight: normal;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 5%; /* Adjust width for ID column */
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 10%; /* Adjust width for Name column */
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 15%; /* Adjust width for Email column */
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 15%; /* Adjust width for Phone column */
+}
+
+.table th:nth-child(5),
+.table td:nth-child(5) {
+    width: 15%; /* Adjust width for Service column */
+}
+
+.table th:nth-child(6),
+.table td:nth-child(6) {
+    width: 15%; /* Adjust width for Address column */
+}
+
+.table th:nth-child(7),
+.table td:nth-child(7) {
+    width: 15%; /* Adjust width for Message column */
+}
+
+.table th:nth-child(8),
+.table td:nth-child(8) {
+    width: 30%; /* Adjust width for Status column */
+}
+
+.table th:nth-child(9),
+.table td:nth-child(9) {
+    width: 30%; /* Adjust width for Status column */
+}
+
+.table th:nth-child(10),
+.table td:nth-child(10) {
+    width: 30%; /* Adjust width for Status column */
+}
+.table td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.table td a:hover {
+    text-decoration: underline;
+}
+
+.table tr {
+    height: 70px; /* Adjust height as needed */
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+
+
+/* style.css */
+
+/* General Styling for the Profile Page */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.profile-title {
+    text-align: center;
+    font-weight: bold;
+    color: #9e1c1f; /* Primary color */
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile-card-header {
+    background-color: #9e1c1f; /* Primary color */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-card-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.profile-table th {
+    width: 30%;
+    color: #9e1c1f; /* Primary color */
+    font-weight: bold;
+}
+
+.profile-table td {
+    width: 70%;
+}
+
+a {
+    color: #9e1c1f; /* Primary color */
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-title {
+        font-size: 1.5rem;
+    }
+
+    .profile-card {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+/* Responsive Media Queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  /* Adjust navbar image size */
+  .navbar img {
+    height: 50px; /* Smaller height for smaller screens */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1rem; /* Smaller font size */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  /* Adjust hero section padding */
+  .hero-section {
+    padding: 30px 0;
+  }
+
+  /* Adjust carousel height */
+  .carousel-inner {
+    height: 60vh; /* Smaller height for smaller screens */
+  }
+
+  /* Adjust card width for home-job section */
+  .home-job .card {
+    flex: 1 1 100%; /* Full width for each card */
+  }
+
+  /* Adjust home-service card layout */
+  .home-service .card {
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+  /* Hide buttons */
+  button#showRecent, button#showUpdated {
+    display: none; /* Hide buttons on small devices */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Adjust navbar image size */
+  .navbar img {
+    height: 60px; /* Smaller height for smaller screens */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1.1rem; /* Slightly smaller font size */
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+
+  /* Adjust carousel height */
+  .carousel-inner {
+    height: 70vh; /* Medium height for medium screens */
+  }
+
+  /* Adjust card width for home-job section */
+  .home-job .card {
+    flex: 1 1 45%; /* Two cards per row */
+  }
+
+  /* Adjust home-service card layout */
+  .home-service .card {
+    margin-bottom: 20px; /* Space between cards */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Adjust navbar image size */
+  .navbar img {
+    height: 70px; /* Slightly larger height */
+  }
+
+  /* Adjust font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Larger font size */
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  /* Adjust carousel height */
+  .carousel-inner {
+    height: 80vh; /* Larger height for larger screens */
+  }
+
+  /* Adjust card width for home-job section */
+  .home-job .card {
+    flex: 1 1 30%; /* Three cards per row */
+  }
+
+  /* Adjust home-service card layout */
+  .home-service .card {
+    margin-bottom: 20px; /* Space between cards */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 993px) {
+  /* Adjust carousel height */
+  .carousel-inner {
+    height: 90vh; /* Full height for largest screens */
+  }
+
+  /* Ensure buttons are shown */
+  button#showRecent, button#showUpdated {
+    display: block;
+  }
+}
